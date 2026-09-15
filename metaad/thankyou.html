@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Sent Successfully</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/custom/fav.jpg"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Animated background particles */
+      .particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .particle {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 15s infinite ease-in-out;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0) scale(1);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.3;
+        }
+        50% {
+          transform: translateY(-100vh) translateX(50px) scale(1.5);
+          opacity: 0.5;
+        }
+        90% {
+          opacity: 0.3;
+        }
+      }
+
+      /* Code rain effect */
+      .code-rain {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0.1;
+      }
+
+      .code-column {
+        position: absolute;
+        top: -100%;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        color: #fff;
+        animation: rain 8s linear infinite;
+      }
+
+      @keyframes rain {
+        to {
+          top: 100%;
+        }
+      }
+
+      .thankyou-sec {
+        padding: 40px 0;
+      }
+
+      .container {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 30px;
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3);
+        max-width: 750px;
+        width: 100%;
+        animation: slideUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(100px) scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .checkmark-container {
+        margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .checkmark {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s backwards;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0) rotate(-180deg);
+        }
+        to {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+
+      .checkmark svg {
+        width: 50px;
+        height: 50px;
+        stroke: white;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        stroke-dasharray: 70;
+        stroke-dashoffset: 70;
+        animation: draw 0.6s ease-out 0.6s forwards;
+      }
+
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .pulse-ring {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid #667eea;
+        animation: pulse 2s ease-out infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      h1 {
+        font-size: 22px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 20px;
+        animation: fadeIn 0.8s ease-out 0.4s backwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      p {
+        font-size: 13px;
+        color: #3e3e3e;
+        line-height: 1.25;
+        margin-bottom: 10px;
+        animation: fadeIn 0.8s ease-out 0.6s backwards;
+        font-weight: 600;
+      }
+
+      .code-block {
+        background: #323232;
+        border-radius: 15px;
+        padding: 25px;
+        margin: 30px 0;
+        text-align: left;
+        font-family: "Courier New", monospace;
+        color: #4ec9b0;
+        font-size: 14px;
+        box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.8s ease-out 0.8s backwards;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .code-block::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        animation: shine 3s infinite;
+      }
+
+      @keyframes shine {
+        to {
+          left: 100%;
+        }
+      }
+
+      .code-line {
+        margin: 5px 0;
+      }
+
+      .keyword {
+        color: #c586c0;
+      }
+      .function {
+        color: #dcdcaa;
+      }
+      .string {
+        color: #ce9178;
+      }
+      .comment {
+        color: #6a9955;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        animation: fadeIn 0.8s ease-out 1s backwards;
+        position: relative;
+        overflow: hidden;
+        line-height: 1;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      .btn:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+      }
+
+      .btn span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .social-links {
+        margin-top: 30px;
+        animation: fadeIn 0.8s ease-out 1.2s backwards;
+      }
+
+      .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(102, 126, 234, 0.1);
+        color: #667eea;
+        line-height: 45px;
+        transition: all 0.3s ease;
+        font-size: 20px;
+      }
+
+      .social-links a:hover {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        transform: translateY(-5px) rotate(360deg);
+      }
+
+      @media (max-width: 768px) {
+        .thankyou-sec {
+          padding: 20px 0;
+        }
+
+        .container {
+          padding: 20px 20px;
+          margin: 0 auto;
+          width: 95%;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+
+        .code-block {
+          font-size: 12px;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated particles -->
+    <div class="particles">
+      <div
+        class="particle"
+        style="
+          width: 15px;
+          height: 15px;
+          left: 10%;
+          animation-delay: 0s;
+          animation-duration: 15s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 25px;
+          height: 25px;
+          left: 20%;
+          animation-delay: 2s;
+          animation-duration: 18s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 10px;
+          height: 10px;
+          left: 30%;
+          animation-delay: 4s;
+          animation-duration: 12s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 20px;
+          height: 20px;
+          left: 40%;
+          animation-delay: 1s;
+          animation-duration: 16s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 30px;
+          height: 30px;
+          left: 50%;
+          animation-delay: 3s;
+          animation-duration: 14s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 12px;
+          height: 12px;
+          left: 60%;
+          animation-delay: 5s;
+          animation-duration: 17s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 18px;
+          height: 18px;
+          left: 70%;
+          animation-delay: 2s;
+          animation-duration: 13s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 22px;
+          height: 22px;
+          left: 80%;
+          animation-delay: 4s;
+          animation-duration: 19s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 8px;
+          height: 8px;
+          left: 90%;
+          animation-delay: 1s;
+          animation-duration: 11s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 16px;
+          height: 16px;
+          left: 15%;
+          animation-delay: 3s;
+          animation-duration: 20s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 28px;
+          height: 28px;
+          left: 25%;
+          animation-delay: 5s;
+          animation-duration: 15s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 14px;
+          height: 14px;
+          left: 35%;
+          animation-delay: 0s;
+          animation-duration: 18s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 24px;
+          height: 24px;
+          left: 45%;
+          animation-delay: 2s;
+          animation-duration: 12s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 11px;
+          height: 11px;
+          left: 55%;
+          animation-delay: 4s;
+          animation-duration: 16s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 19px;
+          height: 19px;
+          left: 65%;
+          animation-delay: 1s;
+          animation-duration: 14s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 26px;
+          height: 26px;
+          left: 75%;
+          animation-delay: 3s;
+          animation-duration: 17s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 13px;
+          height: 13px;
+          left: 85%;
+          animation-delay: 5s;
+          animation-duration: 13s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 21px;
+          height: 21px;
+          left: 95%;
+          animation-delay: 2s;
+          animation-duration: 19s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 17px;
+          height: 17px;
+          left: 5%;
+          animation-delay: 4s;
+          animation-duration: 11s;
+        "
+      ></div>
+      <div
+        class="particle"
+        style="
+          width: 23px;
+          height: 23px;
+          left: 50%;
+          animation-delay: 0s;
+          animation-duration: 20s;
+        "
+      ></div>
+    </div>
+
+    <!-- Code rain effect -->
+    <div class="code-rain">
+      <div
+        class="code-column"
+        style="left: 0%; animation-delay: 0s; animation-duration: 8s"
+      >
+        { }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 7%; animation-delay: 2s; animation-duration: 10s"
+      >
+        fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{ }<br />(
+        )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 14%; animation-delay: 4s; animation-duration: 9s"
+      >
+        ||<br />[]<br />$<br />;<br />{ }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt; <br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 21%; animation-delay: 1s; animation-duration: 11s"
+      >
+        &lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 28%; animation-delay: 3s; animation-duration: 7s"
+      >
+        ==<br />&&&<br />||<br />[]<br />$<br />;<br />{ }<br />( )<br />&lt;
+        &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 35%; animation-delay: 5s; animation-duration: 12s"
+      >
+        $<br />;<br />{ }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt; <br />fn<br />if<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 42%; animation-delay: 0s; animation-duration: 10s"
+      >
+        ( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 49%; animation-delay: 2s; animation-duration: 8s"
+      >
+        if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{ }<br />( )<br />&lt;
+        &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 56%; animation-delay: 4s; animation-duration: 11s"
+      >
+        []<br />$<br />;<br />{ }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt; <br />fn<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 63%; animation-delay: 1s; animation-duration: 9s"
+      >
+        =&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 70%; animation-delay: 3s; animation-duration: 10s"
+      >
+        &&&<br />||<br />[]<br />$<br />;<br />{ }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 77%; animation-delay: 5s; animation-duration: 7s"
+      >
+        ;<br />{ }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt; <br />fn<br />if<br />==<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 84%; animation-delay: 0s; animation-duration: 12s"
+      >
+        &lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 91%; animation-delay: 2s; animation-duration: 8s"
+      >
+        fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{ }<br />(
+        )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />
+      </div>
+      <div
+        class="code-column"
+        style="left: 98%; animation-delay: 4s; animation-duration: 11s"
+      >
+        []<br />$<br />;<br />{ }<br />( )<br />&lt; &gt;<br />=&gt;
+        <br />fn<br />if<br />==<br />&&&<br />||<br />[]<br />$<br />;<br />{
+        }<br />( )<br />&lt; &gt;<br />=&gt; <br />fn<br />
+      </div>
+    </div>
+
+    <section class="thankyou-sec">
+      <div class="container">
+        <div class="checkmark-container">
+          <div class="pulse-ring"></div>
+          <div class="checkmark">
+            <svg viewBox="0 0 52 52">
+              <path d="M14 27l7 7 16-16" />
+            </svg>
+          </div>
+        </div>
+
+        <h1>Successfully Deployed! 🚀</h1>
+
+        <p>
+          Your message has been compiled and pushed to our inbox. Our dev team
+          will review your request and get back to you faster than a hot reload!
+        </p>
+
+        <div class="code-block">
+          <div class="code-line">
+            <span class="keyword">const</span>
+            <span class="function">response</span> =
+            <span class="keyword">await</span>
+            <span class="function">sendMessage</span>();
+          </div>
+          <div class="code-line">
+            <span class="comment">// ✓ Message sent successfully</span>
+          </div>
+          <div class="code-line">
+            <span class="comment">// ✓ Status: 200 OK</span>
+          </div>
+          <div class="code-line">
+            <span class="comment"
+              >// ✓ Response time:
+              <?php echo rand(50, 150); ?>ms</span
+            >
+          </div>
+          <div class="code-line">
+            <span class="keyword">return</span> {
+            <span class="string">status</span>:
+            <span class="string">'success'</span> };
+          </div>
+        </div>
+
+        <a href="index.php" class="btn">
+          <span>← Return to Homepage</span>
+        </a>
+      </div>
+    </section>
+
+    <script>
+      // Add dynamic time
+      document.addEventListener("DOMContentLoaded", function () {
+        // Optional: Add confetti effect on load
+        setTimeout(() => {
+          console.log(
+            "%c✓ Message Delivered Successfully!",
+            "color: #667eea; font-size: 20px; font-weight: bold;"
+          );
+          console.log(
+            "%cThank you for reaching out! 🚀",
+            "color: #764ba2; font-size: 16px;"
+          );
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

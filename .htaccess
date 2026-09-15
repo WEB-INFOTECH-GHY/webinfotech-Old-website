@@ -1,0 +1,119 @@
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.webinfotech.net.in/$1 [R,L]
+
+
+RewriteEngine On
+RewriteRule ^$ index.php [NC,L]
+RewriteRule ^ContactUs$ contact.php [NC,L]
+RewriteRule ^AboutUs$ about.php [NC,L]
+
+RewriteRule ^Web-development-company-in-guwahati$ web_design.php [NC,L]
+
+RewriteRule ^Ecommerce-Agency-Guwahati$ e-commerce.php [NC,L]
+
+RewriteRule ^App-Developer-in-Guwahati$ mobile-app.php [NC,L]
+
+RewriteRule ^Software-Company-in-Guwahati$ software-development.php [NC,L]
+
+RewriteRule ^digital-marketing-company-in-Guwahati$ digital_marketing.php [NC,L]
+
+RewriteRule ^Seo-Service-Guwahati$ seo.php [NC,L]
+
+RewriteRule ^Social-Media-Marketing-Guwahati$ social-media.php [NC,L]
+
+RewriteRule ^tc$ tc.php [NC,L]
+
+RewriteRule ^Career$ career.php [NC,L]
+
+RewriteRule ^Blog$ blog.php [NC,L]
+
+RewriteRule ^why-your-business-needs-a-digital-marketing-agency$ blog1.php [NC,L]
+
+RewriteRule ^digital-marketing$ blog2.php [NC,L]
+
+RewriteRule ^seo-company-in-kolkata$ blog3.php [NC,L]
+
+RewriteRule ^boost-your-business-with-website-and-mobile-app$ blog4.php [NC,L]
+
+RewriteRule ^digital-marketing-vs-traditional-marketing-difference$ blog5.php [NC,L]
+
+RewriteRule ^hire-digital-marketing-agency-guide$ blog6.php [NC,L]
+
+RewriteRule ^seo-beginner$ blog7.php [NC,L]
+
+RewriteRule ^how-does-google-determine-the-relevance-of-a-webpage$ blog8.php [NC,L]
+
+
+RewriteRule ^Seo-for-multilingual-website$ blog9.php [NC,L]
+RewriteRule ^mobile-friendliness-seo$ blog10.php [NC,L]
+RewriteRule ^recover-google-seo-penalty$ blog11.php [NC,L]
+RewriteRule ^website-designer-in-guwahati$ blog12.php [NC,L]
+RewriteRule ^low-cost-website-design-company$ blog13.php [NC,L]
+RewriteRule ^web-design-dibrugarh$ blog14.php [NC,L]
+RewriteRule ^IT-company-in-guwahati$ blog15.php [NC,L]
+RewriteRule ^is-web-development-still-relevant$ blog16.php [NC,L]
+RewriteRule ^website-design-and-development-companies-in-adabari$ blog17.php [NC,L]
+RewriteRule ^website-design-and-development-companies-in-birubari$ blog18.php [NC,L]
+RewriteRule ^website-design-and-development-companies-in-fancyBazar$ blog19.php [NC,L]
+RewriteRule ^website-design-and-development-companies-in-athgaon$ blog20.php [NC,L]
+RewriteRule ^website-design-and-development-companies-in-sixmile$ blog21.php [NC,L]
+RewriteRule ^website-design-and-development-companies-in-beltola$ blog22.php [NC,L]
+RewriteRule ^top-5-web-design-companies-in-dibrugarh$ blog23.php [NC,L]
+RewriteRule ^top-5-web-design-companies-in-jorhat$ blog24.php [NC,L]
+RewriteRule ^website-design-company-in-tezpur$ blog25.php [NC,L]
+RewriteRule ^website-developers-in-tezpur$ blog26.php [NC,L]
+RewriteRule ^Best-Software-company-in-Guwahati$ blog27.php [NC,L]
+RewriteRule ^best-app-developers-in-jorhat$ appJorhat.php [NC,L]
+RewriteRule ^app-developers-in-tezpur$ appTezpur.php [NC,L]
+RewriteRule ^app-developers-in-chandigarh$ chandigarhApp.php [NC,L]
+RewriteRule ^it-companies-in-guwahati$ ITguwahati.php [NC,L]
+RewriteRule ^whey-protein-under-1000$ ./commerceBlog/whey.php [NC,L]
+RewriteRule ^whey-protein-under-1500$ ./commerceBlog/whey1500.php [NC,L]
+RewriteRule ^whey-protein-under-2000$ ./commerceBlog/whey2000.php [NC,L]
+RewriteRule ^whey-protein-under-3000$ ./commerceBlog/whey3000.php [NC,L]
+RewriteRule ^whey-protein-under-4000$ ./commerceBlog/whey4000.php [NC,L]
+
+
+
+
+
+
+
+RewriteRule ^Thankyou$ thankyou.php [NC,L]
+
+
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^web-development-company-guwahati-assam$ "https\:\/\/www\.webinfotech\.net\.in\/Web\-Development\-Company\-in\-Guwahati" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^website-designing-company-guwahati-assam$ "https\:\/\/www\.webinfotech\.net\.in\/Web\-Development\-Company\-in\-Guwahati" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^ecommerce-website-development-company-guwahati$ "https\:\/\/www\.webinfotech\.net\.in\/Ecommerce\-Agency\-Guwahati" [R=301,L]
+
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^android-mobile-app-development-company-guwahati-assam$ "https\:\/\/www\.webinfotech\.net\.in\/App\-Developer\-in\-Guwahati" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^software-development-company-guwahati-assam$ "https\:\/\/www\.webinfotech\.net\.in\/Software\-Company\-in\-Guwahati" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^digital-marketing-agency-guwahati-assam$ "https\:\/\/www\.webinfotech\.net\.in\/Digital\-Marketing\-Agency\-in\-Guwahati" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^seo-services-guwahati-assam$ "https\:\/\/www\.webinfotech\.net\.in\/Seo\-Service\-Guwahati" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^webinfotech\.net\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webinfotech\.net\.in$
+RewriteRule ^social-media-marketing-company-guwahati$ "https\:\/\/www\.webinfotech\.net\.in\/Social\-Media\-Marketing\-Guwahati" [R=301,L]

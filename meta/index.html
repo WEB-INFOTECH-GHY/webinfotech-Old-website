@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Website in 3 Days</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="container">
+        <div class="video-container">
+          <!-- Replace with your actual embed code -->
+          <!-- <iframe
+            width="100%"
+            height="350"
+            src="https://youtu.be/e-iLTIiC-JI?si=7ih7qOxCW5gQpDVn"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe> -->
+          <video width="100%" height="505" controls autoplay muted loop>
+            <source src="./video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="content-wrapper">
+          <h1>Professional Website in 3 Days</h1>
+          <p class="subheading">
+            Your customers are already searching online.<br />The question is —
+            can they find <span class="highlight">you</span>?
+          </p>
+
+          <p class="description">
+            If your business isn't online, you're losing people to competitors
+            who are just one click away.
+          </p>
+
+          <p class="description">
+            The good news? Getting your website made is fast and simple.
+          </p>
+
+          <p class="description">
+            We've built
+            <span class="highlight">1,000+ websites over the last 11 years</span
+            >, and most businesses get their site live in
+            <span class="highlight">just 3 days</span>.
+          </p>
+
+          <p class="description">
+            A website instantly makes your brand look professional, trustworthy,
+            and ready for business.
+          </p>
+
+          <div class="features">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h3 class="feature-title">Our Services</h3>
+              <p class="feature-description">
+                We build fast, modern, business-ready websites that help you get
+                more customers, look professional, and grow online.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h3 class="feature-title">Website Pricing</h3>
+              <p class="feature-description">
+                Professional websites starting at just ₹7000 — clear, upfront
+                pricing with no hidden costs.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-images"></i>
+              </div>
+              <h3 class="feature-title">Testimonials</h3>
+              <p class="feature-description">
+                “They delivered my website exactly the way I imagined. Clean,
+                fast, and perfect for my business — I started getting inquiries
+                within 48 hours!”
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3 class="feature-title">Contact Us</h3>
+              <p class="feature-description">
+                Have questions or want to get started? Reach out instantly and
+                we'll guide you.
+              </p>
+
+              <!-- WhatsApp Button -->
+              <a
+                href="https://wa.me/917086030335"
+                target="_blank"
+                class="btn btn-primary"
+                style="margin-top: 15px; display: inline-block"
+              >
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <p class="description">
+            Everything your customer needs to trust you — all in one place.
+          </p>
+
+          <!-- CTA Button after features -->
+          <div style="margin-top: 40px">
+            <a
+              onclick="openModal()"
+              target="_blank"
+              class="btn btn-primary btn-large"
+              id="featuresCtaBtn"
+              >Get Started Today</a
+            >
+            <a
+              onclick="openModal()"
+              target="_blank"
+              class="btn btn-outline btn-large"
+              id="learnMoreBtn"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Websites Created</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">11</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Day Delivery</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+
+        <!-- CTA Button after stats -->
+        <div style="text-align: center; margin-top: 40px">
+          <a onclick="openModal()" class="btn btn-primary" id="statsCtaBtn"
+            >See Our Work</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="testimonials-title">What Our Clients Say</h2>
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "I was amazed at how quickly they delivered a professional
+              website. My business started getting inquiries within days of
+              launch!"
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Client"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                Sarah Johnson<br />
+                <span class="author-title">Boutique Owner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The team understood our vision perfectly and created a website
+              that truly represents our brand. Highly recommend their services!"
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Client"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                Michael Chen<br />
+                <span class="author-title">Restaurant Owner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "As a tech novice, I appreciated how simple the process was. They
+              handled everything and my new website looks incredible!"
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Client"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                Emma Rodriguez<br />
+                <span class="author-title">Consultant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button after testimonials -->
+        <div style="text-align: center; margin-top: 40px">
+          <a
+            onclick="openModal()"
+            class="btn btn-secondary btn-large"
+            id="testimonialsCtaBtn"
+            >Join Our Happy Clients</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Ready to Get Your Professional Website?</h2>
+        <p class="cta-description">
+          Join thousands of businesses that have transformed their online
+          presence with our fast, affordable website solution.
+        </p>
+        <a
+          onclick="openModal()"
+          class="btn btn-secondary btn-large"
+          id="startNowBtn"
+          >Start Now</a
+        >
+        <a
+          onclick="openModal()"
+          class="btn btn-outline btn-large cntct-btn"
+          id="contactBtn"
+          >Contact Us</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="logo-landing.png" alt="" />
+          </div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2025 Powered by
+          <a href="https://webinfotech.net.in/" target="_blank">Web Infotech</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <button class="open-modal-btn" onclick="openModal()">
+      Open Contact Form
+    </button> -->
+
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      onclick="closeModalOnOverlay(event)"
+    >
+      <div class="form-container">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+
+        <h2>Contact Information</h2>
+        <form action="https://formspree.io/f/mzzngoyw" method="POST">
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contact"
+              >Contact Number <span class="required">*</span></label
+            >
+            <input
+              type="number"
+              id="contact"
+              name="contact"
+              placeholder="Enter your contact number"
+              required
+            />
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+    <script>
+      function openModal() {
+        document.getElementById("modalOverlay").classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        document.getElementById("modalOverlay").classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function closeModalOnOverlay(event) {
+        if (event.target === document.getElementById("modalOverlay")) {
+          closeModal();
+        }
+      }
+
+      function handleSubmit() {
+        const name = document.getElementById("name").value;
+        const contact = document.getElementById("contact").value;
+
+        if (!name || !contact) {
+          alert("Please fill in all required fields");
+          return;
+        }
+
+        // Basic phone validation (10 digits)
+        const phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(contact.replace(/\D/g, ""))) {
+          alert("Please enter a valid 10-digit contact number");
+          return;
+        }
+
+        alert(`Form submitted!\n\nName: ${name}\nContact: ${contact}`);
+
+        // Clear the form
+        document.getElementById("name").value = "";
+        document.getElementById("contact").value = "";
+
+        // Close modal after submission
+        closeModal();
+      }
+
+      // Allow only numbers in contact field
+      document
+        .getElementById("contact")
+        .addEventListener("input", function (e) {
+          this.value = this.value.replace(/[^0-9+\-\s]/g, "");
+        });
+
+      // Close modal on Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>

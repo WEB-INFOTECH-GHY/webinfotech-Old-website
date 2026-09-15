@@ -1,0 +1,10 @@
+[25-Oct-2025 09:30:58 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.33. in /home/webinfonew/public_html/webdesign/vendor/composer/platform_check.php on line 24
+[25-Oct-2025 09:50:25 UTC] PHP Warning:  require(/home/webinfonew/public_html/webdesign/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webinfonew/public_html/webdesign/public/index.php on line 34
+[25-Oct-2025 09:50:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webinfonew/public_html/webdesign/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/webinfonew/public_html/webdesign/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/webinfonew/public_html/webdesign/public/index.php on line 34
+[25-Oct-2025 09:51:50 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.33. in /home/webinfonew/public_html/webdesign/vendor/composer/platform_check.php on line 24
+[25-Oct-2025 09:52:28 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.33. in /home/webinfonew/public_html/webdesign/vendor/composer/platform_check.php on line 24
+[25-Oct-2025 09:52:53 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.33. in /home/webinfonew/public_html/webdesign/vendor/composer/platform_check.php on line 24
+[25-Oct-2025 09:52:56 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.33. in /home/webinfonew/public_html/webdesign/vendor/composer/platform_check.php on line 24
